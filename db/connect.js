@@ -1,7 +1,9 @@
 import { Sequelize } from "sequelize";
 import "dotenv/config";
 
-export const sequelize = new Sequelize(`${process.env.DATA_BASE_URL}`);
+export const sequelize = new Sequelize(
+  `mysql://upe4h82dw5fvadjz:8kZL4ttg84ycDqS0pkdE@b2np4mpxyz4p4pll113r-mysql.services.clever-cloud.com:3306/b2np4mpxyz4p4pll113r`
+);
 
 const db = async () => {
   try {
