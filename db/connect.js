@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
+import "dotenv/config";
 
-export const sequelize = new Sequelize(`mysql://root:root@localhost:3306/route-exam`);
+export const sequelize = new Sequelize(`${process.env.DATA_BASE_URL}`);
 
 const db = async () => {
   try {
